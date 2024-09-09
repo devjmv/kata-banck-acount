@@ -13,7 +13,7 @@ public class Account {
         this.annualInterestRate = annualInterestRate;
         this.numberOfDeposits = 0;
         this.numberOfWithdrawals = 0;
-        this.monthlyServiceCharge = 0.0f;
+        this.monthlyServiceCharge = 0;
     }
 
     public void deposit(float amount) {
