@@ -4,6 +4,10 @@ public class SaveAccount extends Account{
 
     private boolean isActive;
 
+    public boolean isActive() {
+        return isActive;
+    }
+
     public SaveAccount(float balance, float annualInterestRate) {
         super(balance, annualInterestRate);
         this.isActive = balance >= 10000;

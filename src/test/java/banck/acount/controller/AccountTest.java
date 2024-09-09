@@ -10,7 +10,6 @@ public class AccountTest {
 
     @Before
     public void setUp() {
-        // Inicializa una cuenta con un saldo inicial de 1000 y una tasa de interés anual del 5%
         account = new Account(1000.0f, 0.05f);
     }
 
@@ -38,26 +37,24 @@ public class AccountTest {
     @Test
     public void testMonthlyInterest() {
         account.monthlyInterest();
-        assertEquals(1004.17f, account.balance, 0.01); // 5% annual -> 0.4167% monthly interest
+        assertEquals(1004.17f, account.balance, 0.01);
     }
 
     @Test
     public void testMonthlyProcess_NoServiceCharge() {
         account.monthlyProcess();
-        assertEquals(1004.17f, account.balance, 0.01); // Assuming no service charge
+        assertEquals(1004.17f, account.balance, 0.01);
     }
 
     @Test
     public void testMonthlyProcess_WithServiceCharge() {
         account.monthlyServiceCharge = 10.0f;
         account.monthlyProcess();
-        assertEquals(994.125, account.balance, 0.01); // With service charge of 10
+        assertEquals(994.125, account.balance, 0.01);
     }
 
     @Test
     public void testPrint() {
-        // Este test verifica que no se produzcan errores al llamar al método print.
-        // No se valida la salida en consola en sí misma.
         account.print();
     }
 }
