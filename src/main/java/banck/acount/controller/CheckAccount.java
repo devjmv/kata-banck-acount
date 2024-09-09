@@ -4,6 +4,10 @@ public class CheckAccount extends Account {
 
     private float overdraft;
 
+    public float getOverdraft() {
+        return overdraft;
+    }
+
     public CheckAccount(float balance, float annualInterestRate) {
         super(balance, annualInterestRate);
         this.overdraft = 0;
